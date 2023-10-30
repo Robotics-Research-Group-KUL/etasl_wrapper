@@ -1,0 +1,16 @@
+# - Config file for the etasl_wrapper package
+# It defines the following variables
+#  etasl_wrapper_INCLUDE_DIRS - include directories for FooBar
+#  etasl_wrapper_LIBRARIES    - libraries to link against
+#  etasl_wrapper_EXECUTABLE   - the bar executable
+
+set(etasl_wrapper_INCLUDE_DIRS "@CONF_INCLUDE_DIRS@")
+
+# Our library dependencies (contains definitions for IMPORTED targets)
+include("${etasl_wrapper_DIR}/export_etasl_wrapper.cmake")
+
+# These are IMPORTED targets created by etasl_wrapperTargets.cmake
+set(etasl_wrapper_LIBRARIES etasl_wrapper_library)
+
+set(etasl_wrapper_EXECUTABLE etasl_wrapper_binary)
+

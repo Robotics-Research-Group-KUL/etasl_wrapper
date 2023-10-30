@@ -1,0 +1,4 @@
+[submodule "ThirdParty/etasl-cmake"]
+	path = ThirdParty/etasl-cmake
+	url = ../../docker/etasl-cmake.git
+	branch = devel
