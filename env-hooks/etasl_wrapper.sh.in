@@ -4,6 +4,10 @@
 if [ "x{$LUA_PATH}x" = "xx" ]; then
    LUA_PATH=";"
 fi
+if [ "x{$LUA_CPATH}x" = "xx" ]; then
+   LUA_CPATH=";"
+fi
+
 
 
 luapath_append ()
@@ -25,9 +29,9 @@ luacpath_append ()
     export LUA_CPATH="$LUA_CPATH;${1}"
 }
 
-luapath_append "${CMAKE_INSTALL_PREFIX}/lib/etasl1.5/?.lua"
-luapath_append "${CMAKE_INSTALL_PREFIX}/etasl1.5/xml2lua/?.lua"
+luapath_append "@CMAKE_INSTALL_PREFIX@/lib/etasl1.5/?.lua"
+luapath_append "@CMAKE_INSTALL_PREFIX@/lib/etasl1.5/xml2lua/?.lua"
 
-luacpath_append "${CMAKE_INSTALL_PREFIX}/lib/?.so"
+luacpath_append "@CMAKE_INSTALL_PREFIX@/lib/?.so"
 
 
