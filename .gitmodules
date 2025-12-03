@@ -1,5 +1,5 @@
 [submodule "ThirdParty/etasl-cmake"]
 	path = ThirdParty/etasl-cmake
-	url = ../../docker/etasl-cmake.git
+	url = https://gitlab.kuleuven.be/rob-expressiongraphs/docker/etasl-cmake.git
     branch = main
 
